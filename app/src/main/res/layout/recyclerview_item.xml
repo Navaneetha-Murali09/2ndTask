@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:layout_margin="10dp"
+    android:id="@+id/item_view">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/item_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintWidth_percent=".3"
+            app:layout_constraintDimensionRatio="1:1"
+            android:background="@drawable/image_border"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars"
+            />
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:singleLine="false"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/item_price"
+            app:layout_constraintStart_toEndOf="@id/guideline_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/brand_name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="brandLink"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline_content"
+            app:layout_constraintTop_toBottomOf="@+id/item_price"
+            android:singleLine="false"
+            android:autoLink="web"
+            android:textColor="@color/black"/>
+
+
+        <TextView
+            android:id="@+id/item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="price"
+            app:layout_constraintBottom_toTopOf="@+id/brand_name"
+            app:layout_constraintStart_toEndOf="@id/guideline_content"
+            app:layout_constraintTop_toBottomOf="@+id/item_name"
+            android:textColor="@color/black"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinecard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="23dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="141dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
